@@ -11,11 +11,6 @@ export const HeroBanner = styled.section`
   display: flex;
   flex-direction: column;
 
-  header {
-    height: 6rem;
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-
   h1 {
     width: 45%;
     max-width: 600px;
