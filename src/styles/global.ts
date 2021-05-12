@@ -17,6 +17,15 @@ const GlobalStyles = createGlobalStyle`
    --gray: hsl(0, 0%, 55%);
    --dark-gray: hsl(0, 0%, 41%); 
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  body {
+    font-family: 'Alata', sans-serif;
+  }
 `;
 
 export default GlobalStyles;
