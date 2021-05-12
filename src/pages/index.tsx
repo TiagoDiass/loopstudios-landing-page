@@ -33,6 +33,7 @@ export default function Home() {
             </article>
           </div>
         </S.SecondarySection>
+        <div style={{ height: '30rem', background: '#715' }}></div>
       </S.MainContainer>
     </>
   );

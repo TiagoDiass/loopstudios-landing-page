@@ -43,8 +43,12 @@ export const SecondarySection = styled.section`
   /* background-color: #eee; */
   min-height: 80vh;
   padding: 6rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .content {
+    width: 100%;
     /* background-color: #ccc; */
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -78,5 +82,47 @@ export const SecondarySection = styled.section`
         line-height: 2rem;
       }
     }
+  }
+
+  @media (max-width: 1480px) {
+    .content article {
+      height: 100%;
+      row-gap: 1.5rem;
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        line-height: 1.4rem;
+      }
+    }
+  }
+
+  @media (max-width: 1240px) {
+    .content {
+      position: static;
+      display: flex;
+      flex-direction: column;
+
+      article {
+        position: static;
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 960px) {
+    padding: 5rem;
+
+    .content article {
+      padding: 2rem;
+      border: 1px solid rgb(152, 47, 140);
+      border-top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 5rem 2.5rem;
   }
 `;
