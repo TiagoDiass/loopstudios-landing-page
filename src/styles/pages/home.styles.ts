@@ -20,4 +20,19 @@ export const HeroBanner = styled.section`
     color: var(--white);
     font-size: 4.5rem;
   }
+
+  @media (max-width: 1220px) {
+    h1 {
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+      padding: 2rem;
+      margin: auto;
+    }
+  }
 `;

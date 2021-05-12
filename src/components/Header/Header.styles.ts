@@ -24,4 +24,20 @@ export const HeaderContainer = styled.header`
       }
     }
   }
+
+  @media (max-width: 1220px) {
+    nav {
+      column-gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 960px) {
+    nav {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 3rem;
+  }
 `;

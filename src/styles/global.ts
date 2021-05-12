@@ -11,6 +11,12 @@ const GlobalStyles = createGlobalStyle`
     font-size: 15px;
   }
 
+  @media (max-width: 768px) {
+    html {
+      font-size: 13px;
+    }
+  }
+
   :root {
    --white: #fff;
    --black: #000;
