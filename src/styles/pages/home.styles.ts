@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
-export const MainContainer = styled.main``;
+export const MainContainer = styled.main`
+  /* background-color: tomato; */
+`;
 
 export const HeroBanner = styled.section`
-  height: 85vh;
+  height: 100vh;
   background-image: url('/images/desktop/image-hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,6 +35,48 @@ export const HeroBanner = styled.section`
       font-size: 3rem;
       padding: 2rem;
       margin: auto;
+    }
+  }
+`;
+
+export const SecondarySection = styled.section`
+  /* background-color: #eee; */
+  min-height: 80vh;
+  padding: 6rem 10rem;
+
+  .content {
+    /* background-color: #ccc; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    article {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 45%;
+      height: 60%;
+      padding: 4rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 2.2rem;
+
+      background-color: #fff;
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        color: var(--gray);
+        line-height: 2rem;
+      }
     }
   }
 `;
