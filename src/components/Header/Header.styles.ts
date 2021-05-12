@@ -39,5 +39,9 @@ export const HeaderContainer = styled.header`
 
   @media (max-width: 768px) {
     padding: 2rem 3rem;
+
+    img {
+      width: 130px;
+    }
   }
 `;
