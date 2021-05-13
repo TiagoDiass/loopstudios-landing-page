@@ -176,9 +176,39 @@ export const CreationsSection = styled.section`
       margin-top: 2rem;
 
       display: grid;
-      grid-template-columns: repeat(4, 320px);
+      grid-template-columns: repeat(4, 1fr);
       grid-gap: 2rem;
       justify-content: center;
+    }
+  }
+
+  @media (max-width: 1480px) {
+    .content div.header h3 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    .content div.blocksWrapper {
+      grid-gap: 1rem;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .content div.blocksWrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 960px) {
+    padding: 5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 5rem 2.5rem;
+
+    .content div.blocksWrapper {
+      grid-template-columns: 1fr;
     }
   }
 `;
