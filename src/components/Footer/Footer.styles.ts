@@ -5,7 +5,7 @@ export const Footer = styled.footer`
   align-items: center;
   justify-content: center;
   padding: 3rem 15rem;
-  height: 12rem;
+  min-height: 12rem;
   background-color: var(--black);
 
   .content {
@@ -74,6 +74,30 @@ export const Footer = styled.footer`
         letter-spacing: 1px;
         color: #fff8;
       }
+    }
+  }
+
+  @media (max-width: 960px) {
+    padding: 3rem 5rem;
+
+    .content {
+      flex-direction: column;
+      row-gap: 2rem;
+      justify-content: center;
+
+      .leftBlock,
+      .rightBlock {
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        row-gap: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content .leftBlock nav {
+      column-gap: 1.2rem;
     }
   }
 `;
