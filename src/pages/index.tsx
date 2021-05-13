@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import creations from '../content/creations';
 import Header from '../components/Header/Header';
 import * as S from '../styles/pages/home.styles';
 
@@ -33,7 +34,28 @@ export default function Home() {
             </article>
           </div>
         </S.SecondarySection>
-        <div style={{ height: '30rem', background: '#715' }}></div>
+
+        <S.CreationsSection>
+          <div className='content'>
+            <div className='header'>
+              <h3>Our Creations</h3>
+
+              <button>See all</button>
+            </div>
+
+            <div className='blocksWrapper'>
+              {creations.map((creation) => (
+                <S.CreationItem
+                  imageUrl={`/images/desktop/${creation.imageName}`}
+                >
+                  <h5>{creation.name}</h5>
+                </S.CreationItem>
+              ))}
+            </div>
+          </div>
+        </S.CreationsSection>
+
+        <div style={{ height: '25rem', background: 'tomato' }}></div>
       </S.MainContainer>
     </>
   );

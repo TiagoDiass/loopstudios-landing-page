@@ -18,7 +18,7 @@ export const HeroBanner = styled.section`
     max-width: 600px;
     padding: 2rem 4rem 2rem 2rem;
     border: 1px solid var(--white);
-    margin: auto 10rem;
+    margin: auto 15rem;
     color: var(--white);
     font-size: 4.5rem;
   }
@@ -42,7 +42,7 @@ export const HeroBanner = styled.section`
 export const SecondarySection = styled.section`
   /* background-color: #eee; */
   min-height: 80vh;
-  padding: 6rem 10rem;
+  padding: 6rem 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,5 +124,105 @@ export const SecondarySection = styled.section`
 
   @media (max-width: 768px) {
     padding: 5rem 2.5rem;
+  }
+`;
+
+export const CreationsSection = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 15rem;
+
+  .content {
+    /* background-color: #eee; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    div.header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-size: 3rem;
+        text-transform: uppercase;
+      }
+
+      button {
+        font-family: 'Alata';
+        letter-spacing: 3px;
+        font-weight: 300;
+        font-size: 1rem;
+        text-transform: uppercase;
+
+        width: 10rem;
+        padding: 0.75rem 0;
+        background-color: transparent;
+        border: 1px solid var(--black);
+
+        transition: all 0.2s ease;
+
+        &:hover {
+          cursor: pointer;
+          background-color: var(--black);
+          color: var(--white);
+        }
+      }
+    }
+
+    div.blocksWrapper {
+      /* background-color: #ccc; */
+      margin-top: 2rem;
+
+      display: grid;
+      grid-template-columns: repeat(4, 320px);
+      grid-gap: 2rem;
+      justify-content: center;
+    }
+  }
+`;
+
+export const CreationItem = styled.article<{ imageUrl: string }>`
+  width: 100%;
+  height: 450px;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url('${({ imageUrl }) => imageUrl}');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+
+  cursor: pointer;
+
+  h5 {
+    color: var(--white);
+    font-size: 1.65rem;
+    text-transform: uppercase;
+  }
+
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+
+    position: relative;
+
+    ::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      content: '';
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(255, 255, 255, 0.4)
+      );
+    }
   }
 `;
