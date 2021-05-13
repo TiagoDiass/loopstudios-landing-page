@@ -44,8 +44,9 @@ export default function Home() {
             </div>
 
             <div className='blocksWrapper'>
-              {creations.map((creation) => (
+              {creations.map((creation, index) => (
                 <S.CreationItem
+                  key={index}
                   imageUrl={`/images/desktop/${creation.imageName}`}
                 >
                   <h5>{creation.name}</h5>
