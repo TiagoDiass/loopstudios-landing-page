@@ -117,7 +117,7 @@ export const SecondarySection = styled.section`
 
     .content article {
       padding: 2rem;
-      border: 1px solid rgb(152, 47, 140);
+      border: 1px solid #ddd;
       border-top: 0;
     }
   }
