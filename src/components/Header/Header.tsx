@@ -24,7 +24,17 @@ export default function Header() {
         )}
       </S.MobileIcon>
 
-      {isMobileMenuOpened && <S.MobileMenu></S.MobileMenu>}
+      {isMobileMenuOpened && (
+        <S.MobileMenu>
+          <nav>
+            <a href='#'>About</a>
+            <a href='#'>Careers</a>
+            <a href='#'>Events</a>
+            <a href='#'>Products</a>
+            <a href='#'>Support</a>
+          </nav>
+        </S.MobileMenu>
+      )}
     </S.HeaderContainer>
   );
 }

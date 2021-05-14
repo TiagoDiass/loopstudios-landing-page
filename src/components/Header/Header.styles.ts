@@ -71,6 +71,10 @@ export const MobileIcon = styled.button`
   cursor: pointer;
   z-index: 3;
 
+  img {
+    max-width: 20px;
+  }
+
   @media (max-width: 960px) {
     display: block;
   }
@@ -84,6 +88,28 @@ export const MobileMenu = styled.div`
   top: 0;
   height: 100vh;
   width: 100%;
-
   animation: ${fadeFromLeft} 1s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 0 5rem;
+
+  @media (max-width: 768px) {
+    padding: 0 3rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    a {
+      font-size: 2rem;
+      color: #fff;
+      font-family: 'Josefin Sans';
+      text-transform: uppercase;
+    }
+  }
 `;
